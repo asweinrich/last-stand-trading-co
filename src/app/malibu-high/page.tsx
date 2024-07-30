@@ -15,47 +15,54 @@ const MalibuHigh = () => {
 
     const canvas = document.getElementById('canvas-preview') as HTMLCanvasElement | null;
     const canvasFull = document.getElementById('canvas-full') as HTMLCanvasElement | null;
-    const ctx = canvas.getContext('2d')
-    const ctxFull = canvasFull.getContext('2d')
+
+    if (canvas && canvasFull) {
+      const ctx = canvas.getContext('2d');
+      const ctxFull = canvasFull.getContext('2d');
+
+      if (ctx && ctxFull) {
     
-    canvasFull.width = 2388
-    canvasFull.height = 1522
+    
+        canvasFull.width = 2388
+        canvasFull.height = 1522
 
-    canvas.width = 320
-    canvas.height = 204
+        canvas.width = 320
+        canvas.height = 204
 
-    const overlay = new Image()
-    overlay.src = '/media/malibu-high/malibu-high-id.svg'
+        const overlay = new Image()
+        overlay.src = '/media/malibu-high/malibu-high-id.svg'
 
-    const wildOneImg = new Image()
-    wildOneImg.crossOrigin = 'anonymous'
-    wildOneImg.src = nftImg 
-    wildOneImg.onload = () => {
-      ctx.drawImage(wildOneImg, (0.02*canvas.width), (0.0267*canvas.width), (0.367*canvas.width), (0.367*canvas.width))
-      //make a ratio of screen width 
-      ctx.drawImage(overlay, 0, 0, canvas.width, canvas.height)
-      //make a ratio of screen width 
-      canvas.style.letterSpacing = '0.5px';
-      ctx.font = "22px SteezBold";
-      ctx.textAlign = "center";
-      ctx.fillStyle = '#000';
-      const paddedId = nftID.toString().padStart(4, '0')
-      ctx.fillText('ID#: '+paddedId, (0.2067*canvas.width), (0.838*canvas.height))
-      //make a ratio of screen width 
-      ctx.font = "17px SteezBold";
-      ctx.fillText(nftAlias, (0.64*canvas.width), (0.94*canvas.height))
+        const wildOneImg = new Image()
+        wildOneImg.crossOrigin = 'anonymous'
+        wildOneImg.src = nftImg 
+        wildOneImg.onload = () => {
+          ctx.drawImage(wildOneImg, (0.02*canvas.width), (0.0267*canvas.width), (0.367*canvas.width), (0.367*canvas.width))
+          //make a ratio of screen width 
+          ctx.drawImage(overlay, 0, 0, canvas.width, canvas.height)
+          //make a ratio of screen width 
+          canvas.style.letterSpacing = '0.5px';
+          ctx.font = "22px SteezBold";
+          ctx.textAlign = "center";
+          ctx.fillStyle = '#000';
+          const paddedId = nftID.toString().padStart(4, '0')
+          ctx.fillText('ID#: '+paddedId, (0.2067*canvas.width), (0.838*canvas.height))
+          //make a ratio of screen width 
+          ctx.font = "17px SteezBold";
+          ctx.fillText(nftAlias, (0.64*canvas.width), (0.94*canvas.height))
 
-      ctxFull.drawImage(wildOneImg, 48, 64, 876, 876)
-      ctxFull.drawImage(overlay, 0, 0, 2388, 1522)
-      canvasFull.style.letterSpacing = '0.5px'
-      ctxFull.font = "175px SteezBold";
-      ctxFull.textAlign = "center";
-      ctxFull.fillStyle = '#000'
-      ctxFull.fillText('ID#: '+paddedId, 494, 1274)
-      ctxFull.font = "134px SteezBold";
-      ctxFull.textAlign = "center";
-      ctxFull.fillStyle = '#000'
-      ctxFull.fillText(nftAlias, 1528, 1416)
+          ctxFull.drawImage(wildOneImg, 48, 64, 876, 876)
+          ctxFull.drawImage(overlay, 0, 0, 2388, 1522)
+          canvasFull.style.letterSpacing = '0.5px'
+          ctxFull.font = "175px SteezBold";
+          ctxFull.textAlign = "center";
+          ctxFull.fillStyle = '#000'
+          ctxFull.fillText('ID#: '+paddedId, 494, 1274)
+          ctxFull.font = "134px SteezBold";
+          ctxFull.textAlign = "center";
+          ctxFull.fillStyle = '#000'
+          ctxFull.fillText(nftAlias, 1528, 1416)
+        }
+      }
     }
   }, [nftImg]);
 

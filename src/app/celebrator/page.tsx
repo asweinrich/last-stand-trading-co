@@ -3,10 +3,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+interface Attribute {
+  trait_type: string;
+  value: string;
+}
+
 const Celebrator = () => {
   const [nftID, setNftID] = useState('');
   const [nftImg, setNftImg] = useState('');
-  const [attributes, setAttributes] = useState([]);
+  const [attributes, setAttributes] = useState<Attribute[]>([]);
   const [error, setError] = useState('');
 
   const handleFetchAttributes = async () => {

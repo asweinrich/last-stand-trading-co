@@ -90,11 +90,11 @@ const MalibuHigh = () => {
     }
   };
 
-  const handleChangeId = (e) => {
+  const handleChangeId = (e: any) => {
     setNftID(e.target.value);
   };
 
-  const handleChangeAlias = (e) => {
+  const handleChangeAlias = (e: any) => {
     setNftAlias(e.target.value);
   };
 

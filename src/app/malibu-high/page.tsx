@@ -13,8 +13,8 @@ const MalibuHigh = () => {
 
   useEffect(() => {
 
-    const canvas = document.getElementById('canvas-preview')
-    const canvasFull = document.getElementById('canvas-full')
+    const canvas = document.getElementById('canvas-preview') as HTMLCanvasElement | null;
+    const canvasFull = document.getElementById('canvas-full') as HTMLCanvasElement | null;
     const ctx = canvas.getContext('2d')
     const ctxFull = canvasFull.getContext('2d')
     
@@ -99,7 +99,7 @@ const MalibuHigh = () => {
   };
 
   function saveImage(element) {
-      const canvas = document.getElementById('canvas-full')
+      const canvas = document.getElementById('canvas-full') as HTMLCanvasElement | null;
       const image = canvas.toDataURL("image/jpg")
       const win = window.open()
       win.document.write('<img src="'+image+'" height="1522" width="2388" />')

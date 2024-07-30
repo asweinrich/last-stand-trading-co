@@ -105,7 +105,7 @@ const MalibuHigh = () => {
     setNftAlias(e.target.value);
   };
 
-  function saveImage(element) {
+  function saveImage(element: any) {
       const canvas = document.getElementById('canvas-full') as HTMLCanvasElement | null;
       const image = canvas.toDataURL("image/jpg")
       const win = window.open()

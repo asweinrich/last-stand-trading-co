@@ -39,7 +39,7 @@ const Celebrator = () => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setNftID(e.target.value);
   };
 

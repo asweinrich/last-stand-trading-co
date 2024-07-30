@@ -1,0 +1,113 @@
+{
+	"RightFacingA": {
+		"Hats": [
+			"Hacksaw",
+			"Driller Killer",
+			"Bowie",
+			"Milkshake",
+			"Screwed Up",
+			"Wind-up",
+			"Motorcycle Boy",
+			"Full Metal",
+			"Crockett",
+			"Ronald",
+			"Marv",
+			"Desert Storm",
+			"Night of the Hunter",
+			"First Blood",
+			"Compassionate Monster"
+		],
+		"Masks": [
+			"Predator", 
+			"Splinter Cell",
+			"Phantom"
+		]
+	},
+	"RightFacingB": {
+		"Hats": [
+			"Sgt. Hartman",
+			"Great Silence",
+			"Man With No Name",
+			"Coogan",
+			"Gittes",
+			"Drifter",
+			"Red Stovall",
+			"Hex",
+			"King Arthur",
+			"Malibu High",
+			"Léon",
+			"Basterds"
+		],
+		"Masks": [
+			"Humungus"		
+		]
+	},
+	"RightFacingSpecial": {
+		"Hats": [
+			"Spiked",
+			"King Kong",
+			"Satan",
+			"Burning Desire",
+			"Siren",
+			"Bill the Butcher",
+			"Fuse"
+		]
+	},
+	"LeftFacingA": {
+		"Hats": [
+			"Hacksaw",
+			"Driller Killer",
+			"Bowie",
+			"Wind-up",
+			"Motorcycle Boy",
+			"Full Metal",
+			"Crockett",
+			"Ronald",
+			"Marv",
+			"Desert Storm",
+			"Night of the Hunter",
+			"First Blood",
+			"Compassionate Monster",
+			"Léon",
+			"Kurt Russell"
+		],
+		"Masks": [
+			"Predator", 
+			"Splinter Cell",
+			"Phantom",
+			"Humungus"
+		]
+	},
+	"LeftFacingB": {
+		"Hats": [
+			"Drifter",
+			"Malibu High",
+			"Hex",
+			"King Arthur",
+			"Gittes",
+			"Red Stovall",
+			"Coogan",
+			"Sgt. Hartman",
+			"Doc Holliday",
+			"Great Silence"
+		]
+	},
+	"LeftFacingSpecial": {
+		"Hats": [
+			"Spiked",
+			"King Kong",
+			"Satan",
+			"Burning Desire",
+			"Siren",
+			"Bill the Butcher",
+			"Fuse",
+			"Screwed Up",
+			"Milkshake",
+			"Basterds"
+		]
+	}	
+		
+	
+}
+
+	

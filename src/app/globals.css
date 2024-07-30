@@ -16,6 +16,31 @@
   }
 }
 
+@font-face {
+  font-family: 'SteezBold';
+  src: url('/fonts/SteezBold.ttf') format('truetype'); /* Update the font path and format accordingly */
+}
+
+@font-face {
+  font-family: 'SteezRegular';
+  src: url('/fonts/Steez-Regular.ttf') format('truetype'); /* Update the font path and format accordingly */
+}
+
+@font-face {
+  font-family: 'PlatNomor';
+  src: url('/fonts/PlatNomor.ttf') format('truetype'); /* Update the font path and format accordingly */
+}
+
+@font-face {
+  font-family: 'DueCredit';
+  src: url('/fonts/DueCreditBold.otf') format('truetype'); /* Update the font path and format accordingly */
+}
+
+@font-face {
+  font-family: 'Western';
+  src: url('/fonts/Western.ttf') format('truetype'); /* Update the font path and format accordingly */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

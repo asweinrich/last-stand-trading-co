@@ -109,7 +109,7 @@ const MalibuHigh = () => {
       const canvas = document.getElementById('canvas-full') as HTMLCanvasElement | null;
       const image = canvas!.toDataURL("image/jpg")
       const win = window.open()
-      win.document.write('<img src="'+image+'" height="1522" width="2388" />')
+      win!.document.write('<img src="'+image+'" height="1522" width="2388" />')
   }
 
   return (

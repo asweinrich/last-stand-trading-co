@@ -34,7 +34,7 @@ const PhoneWallpaper = () => {
     const canvas = document.getElementById('canvas-preview') as HTMLCanvasElement | null;
     const canvasFull = document.getElementById('canvas-full') as HTMLCanvasElement | null;
 
-    const sizeRatio = 0.75
+    const sizeRatio = 1
 
     if (canvas && canvasFull) {
       const ctx = canvas.getContext('2d');

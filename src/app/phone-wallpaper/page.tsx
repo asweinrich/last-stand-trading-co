@@ -79,7 +79,7 @@ const PhoneWallpaper = () => {
           let driveInTextColor = '#222222';
 
           if (wildOne[5] && wildOne[2] === overlayDriveIn) {
-            const traits = wildOne[5].traits;
+            const traits = (wildOne[5] as { traits: { trait_type: string; value: string }[] }).traits;
 
             for (let i = 0; i < traits.length; i++) {
               if (traits[i].trait_type === 'Background Color') {

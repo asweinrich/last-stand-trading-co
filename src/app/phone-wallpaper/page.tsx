@@ -78,7 +78,7 @@ const PhoneWallpaper = () => {
 
           let driveInTextColor = '#222222';
 
-          if (wildOne[5] && wildOne[2] === overlayDriveIn) {
+          if (typeof wildOne[5] === 'object' && wildOne[5] !== null && 'traits' in wildOne[5]) {
             const traits = (wildOne[5] as { traits: { trait_type: string; value: string }[] }).traits;
 
             for (let i = 0; i < traits.length; i++) {
@@ -89,7 +89,10 @@ const PhoneWallpaper = () => {
                 }
               }
             }
+          } else {
+            console.error('wildOne[5] is not an object or does not have traits');
           }
+        }
 
           // Clear the canvas before drawing
           ctx.clearRect(0, 0, canvas.width, canvas.height);

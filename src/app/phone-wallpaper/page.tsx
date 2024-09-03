@@ -108,7 +108,7 @@ const PhoneWallpaper = () => {
             ctx.font = 'bold '+ 6*sizeRatio + 'px PlatNomor';
             ctx.textAlign = 'center';
             ctx.fillStyle = '#222222';
-            const paddedId = wildOne[0].toString().padStart(4, '0');
+            const paddedId = wildOne[0]!.toString().padStart(4, '0');
             ctx.fillText('WO ' + paddedId, 55*sizeRatio, 638*sizeRatio);
 
             ctx.rotate((5 * Math.PI) / 180);
@@ -117,7 +117,7 @@ const PhoneWallpaper = () => {
             ctx.font = 36*sizeRatio +'px DueCredit';
             ctx.textAlign = 'center';
             ctx.fillStyle = driveInTextColor;
-            ctx.fillText('STARRING WILD ONE ' + wildOne[0], 156*sizeRatio, 455*sizeRatio);
+            ctx.fillText('STARRING WILD ONE ' + wildOne[0]!, 156*sizeRatio, 455*sizeRatio);
 
             ctxFull.drawImage(overlay, 0, 0, canvasFull.width, canvasFull.height);
             ctxFull.drawImage(baseImg, 75, 730, 970, 970);
@@ -134,7 +134,7 @@ const PhoneWallpaper = () => {
             ctxFull.font = '126px DueCredit';
             ctxFull.textAlign = 'center';
             ctxFull.fillStyle = driveInTextColor;
-            ctxFull.fillText('STARRING WILD ONE ' + wildOne[0], 560, 1645);
+            ctxFull.fillText('STARRING WILD ONE ' + wildOne[0]!, 560, 1645);
           } else if (wildOne[2] === overlayScribb) {
             ctx.fillStyle = 'red';
             ctx.fillRect(0, 0, 313*sizeRatio, 677*sizeRatio);
@@ -147,7 +147,7 @@ const PhoneWallpaper = () => {
             ctx.textAlign = 'center';
             ctx.fillStyle = '#222222';
             ctx.rotate((-6 * Math.PI) / 180);
-            ctx.fillText('"Wild One #' + wildOne[0] + '"', 135*sizeRatio, 250*sizeRatio);
+            ctx.fillText('"Wild One #' + wildOne[0]! + '"', 135*sizeRatio, 250*sizeRatio);
 
             ctxFull.fillStyle = 'red';
             ctxFull.fillRect(0, 0, 1125, 2436);
@@ -160,7 +160,7 @@ const PhoneWallpaper = () => {
             ctxFull.textAlign = 'center';
             ctxFull.fillStyle = '#222222';
             ctxFull.rotate((-6.5 * Math.PI) / 180);
-            ctxFull.fillText('"Wild One #' + wildOne[0] + '"', 450, 898);
+            ctxFull.fillText('"Wild One #' + wildOne[0]! + '"', 450, 898);
           } else if (wildOne[2] === overlayOneOfOne) {
             ctx.drawImage(baseImg, 92*sizeRatio, 273*sizeRatio, 130*sizeRatio, 130*sizeRatio);
             ctx.drawImage(overlayP, 0, 0, canvas.width, canvas.height);
@@ -170,7 +170,7 @@ const PhoneWallpaper = () => {
             ctx.fillStyle = '#000';
             ctx.fillText(wildOne[3], 157*sizeRatio, 488*sizeRatio);
             ctx.font = 8*sizeRatio + 'px Calibri';
-            ctx.fillText('WO ' + wildOne[0], 157*sizeRatio, 499*sizeRatio);
+            ctx.fillText('WO ' + wildOne[0]!, 157*sizeRatio, 499*sizeRatio);
 
             ctxFull.drawImage(baseImg, 330, 980, 466, 466);
             ctxFull.drawImage(overlay, 0, 0, canvasFull.width, canvasFull.height);
@@ -178,9 +178,9 @@ const PhoneWallpaper = () => {
             ctxFull.font = 'bold 28px Calibri';
             ctxFull.textAlign = 'center';
             ctxFull.fillStyle = '#222222';
-            ctxFull.fillText('' + wildOne[3], 563, 1755);
+            ctxFull.fillText('' + wildOne[3]!, 563, 1755);
             ctxFull.font = '30px Calibri';
-            ctxFull.fillText(wildOne[0], 563, 1797);
+            ctxFull.fillText(wildOne[0]!, 563, 1797);
           } else if (wildOne[2] === overlayWanted) {
             ctx.drawImage(overlayP, 0, 0, canvas.width, canvas.height);
             ctx.drawImage(baseImg, 68*sizeRatio, 233*sizeRatio, 148*sizeRatio, 148*sizeRatio);
@@ -188,7 +188,7 @@ const PhoneWallpaper = () => {
             ctx.font = 18*sizeRatio + 'px EuroWestern';
             ctx.textAlign = 'center';
             ctx.fillStyle = '#222222';
-            ctx.fillText('$' + wildOne[0], 140*sizeRatio, 426*sizeRatio);
+            ctx.fillText('$' + wildOne[0]!, 140*sizeRatio, 426*sizeRatio);
 
             ctxFull.drawImage(overlay, 0, 0, canvasFull.width, canvasFull.height);
             ctxFull.drawImage(baseImg, 250, 845, 520, 520);
@@ -196,8 +196,8 @@ const PhoneWallpaper = () => {
             ctxFull.font = '94px EuroWestern';
             ctxFull.textAlign = 'center';
             ctxFull.fillStyle = '#222222';
-            ctxFull.fillText('$' + wildOne[0], 505, 1535);
-          } else if (wildOne[2] === overlayWhite) {
+            ctxFull.fillText('$' + wildOne[0]!, 505, 1535);
+          } else if (wildOne[2]! === overlayWhite) {
             ctx.rotate((11 * Math.PI) / 180);
             ctx.drawImage(baseImg, 194*sizeRatio, 382*sizeRatio, 181*sizeRatio, 181*sizeRatio);
             ctx.rotate((-11 * Math.PI) / 180);
@@ -206,7 +206,7 @@ const PhoneWallpaper = () => {
             ctx.font = 13*sizeRatio + 'px SteezBold';
             ctx.textAlign = 'center';
             ctx.fillStyle = '#222222';
-            const paddedId = wildOne[0].toString().padStart(4, '0');
+            const paddedId = wildOne[0]!.toString().padStart(4, '0');
             ctx.rotate((6 * Math.PI) / 180);
             ctx.fillText('WO-' + paddedId, 227*sizeRatio, 419*sizeRatio);
 

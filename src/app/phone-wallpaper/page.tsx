@@ -48,14 +48,26 @@ const PhoneWallpaper = () => {
           canvas.height = 677*sizeRatio;
 
           const overlay = new Image();
-          overlay.src = wildOne[2];
-
           const overlayP = new Image();
-          overlayP.src = wildOne[4];
+
+          // Ensure wildOne[2] and wildOne[4] are not null
+          if (wildOne[2]) {
+            overlay.src = wildOne[2] as string;
+          } else {
+            console.error('Overlay source is null');
+            return;
+          }
+
+          if (wildOne[4]) {
+            overlayP.src = wildOne[4] as string;
+          } else {
+            console.error('Overlay preview source is null');
+            return;
+          }
 
           const baseImg = new Image();
           baseImg.crossOrigin = 'Anonymous';
-          baseImg.src = wildOne[1];
+          baseImg.src = wildOne[1] as string;
 
           await Promise.all([
             new Promise<void>((resolve) => (overlay.onload = () => resolve())),

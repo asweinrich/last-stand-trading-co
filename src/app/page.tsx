@@ -14,9 +14,9 @@ export default function Home() {
       <div className="text-center p-4">
         <h1 className="text-4xl font-bold mb-8">Welcome to NFT Canvas Generators</h1>
         <div className="flex flex-row">
-          <Link href="/celebrator">
-            <Image src={anIcon} alt="Hand Drawn Art" className="w-20 mx-2" />
-          </Link>
+          
+            <Image src={anIcon} alt="Hand Drawn Art" className="w-20 mx-2 opacity-50" />
+          
           <Link href="/malibu-high">
             <Image src={mhIcon} alt="Hand Drawn Art" className="w-20 mx-2" />
           </Link>

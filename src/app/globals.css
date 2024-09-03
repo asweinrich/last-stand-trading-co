@@ -37,8 +37,8 @@
 }
 
 @font-face {
-  font-family: 'Western';
-  src: url('/fonts/Western.ttf') format('truetype'); /* Update the font path and format accordingly */
+  font-family: 'EuroWestern';
+  src: url('/fonts/EuroWestern.otf') format('truetype'); /* Update the font path and format accordingly */
 }
 
 body {

@@ -1,3 +1,4 @@
+
 'use client' 
 
 import React, { useState, useEffect } from 'react';
@@ -79,7 +80,7 @@ const MalibuHigh = () => {
         }, 
         headers: {
           'Accept': 'application/json',
-          'X-API-KEY': 'bd019ee388f74005b6eb1f5f3d184523'
+          'X-API-KEY': 'fb08f4a9f4684d0d8ae14f638d66cefa'
         }
       });
       if (response.status === 200) {

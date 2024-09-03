@@ -168,7 +168,7 @@ const PhoneWallpaper = () => {
             ctx.font = 'bold '+ 7*sizeRatio + 'px Calibri';
             ctx.textAlign = 'center';
             ctx.fillStyle = '#000';
-            ctx.fillText(wildOne[3], 157*sizeRatio, 488*sizeRatio);
+            ctx.fillText(wildOne[3] !== null ? String(wildOne[3]) : '', 157 * sizeRatio, 488 * sizeRatio);
             ctx.font = 8*sizeRatio + 'px Calibri';
             ctx.fillText('WO ' + wildOne[0]!, 157*sizeRatio, 499*sizeRatio);
 
@@ -180,7 +180,7 @@ const PhoneWallpaper = () => {
             ctxFull.fillStyle = '#222222';
             ctxFull.fillText('' + wildOne[3]!, 563, 1755);
             ctxFull.font = '30px Calibri';
-            ctxFull.fillText(wildOne[0]!, 563, 1797);
+            ctxFull.fillText(String(wildOne[0]), 563, 1797);
           } else if (wildOne[2] === overlayWanted) {
             ctx.drawImage(overlayP, 0, 0, canvas.width, canvas.height);
             ctx.drawImage(baseImg, 68*sizeRatio, 233*sizeRatio, 148*sizeRatio, 148*sizeRatio);
@@ -243,6 +243,10 @@ const PhoneWallpaper = () => {
       const baseURL =
         `https://api.opensea.io/v2/chain/ethereum/contract/${wildBunchAddress}/nfts/${tempId}`;
       const apiKey = process.env.NEXT_PUBLIC_OPENSEA_API_KEY;
+
+      if (!apiKey) {
+        throw new Error('API key is missing');
+      }
 
       try {
         const response = await fetch(baseURL, {

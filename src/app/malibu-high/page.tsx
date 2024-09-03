@@ -80,7 +80,7 @@ const MalibuHigh = () => {
         }, 
         headers: {
           'Accept': 'application/json',
-          'X-API-KEY': 'fb08f4a9f4684d0d8ae14f638d66cefa'
+          'X-API-KEY': process.env.NEXT_PUBLIC_OPENSEA_API_KEY
         }
       });
       if (response.status === 200) {
@@ -142,9 +142,9 @@ const MalibuHigh = () => {
         </button>
         {error && <p className="text-red-500">{error}</p>}
 
-        <p className="text-xl leading-none text-center my-4">When your ID is ready, hit DOWNLOAD to save it in high resolution</p>
+        <p className="text-xl leading-none text-center my-4">When your ID is ready, hit EXPORT to save it in high resolution</p>
 
-        <button className="w-full font-bold bg-red-700 text-white px-4 py-2 rounded text-3xl" onClick={() => saveImage()}>Download</button>
+        <button className="w-full font-bold bg-red-700 text-white px-4 py-2 rounded text-3xl" onClick={() => saveImage()}>Export</button>
 
       </div>
 

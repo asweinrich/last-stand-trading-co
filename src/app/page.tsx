@@ -10,10 +10,10 @@ import backWall from '/public/png/lstc-bg-wall.png';
 export default function Home() {
   return (
     <>
-    <div className="flex flex-col items-center justify-between h-screen max-w-[1000px] mx-auto overflow-hidden relative bg-stone-800">
+    <div className="flex flex-col items-center justify-between h-screen max-w-[1000px] mx-auto overflow-hidden relative">
       <div className="text-center p-4">
-        <h1 className="text-4xl font-bold mb-8">Welcome to NFT Canvas Generators</h1>
-        <div className="flex flex-row">
+        <h1 className="text-4xl font-bold mb-8">Last Stand Trading Company</h1>
+        <div className="flex flex-row justify-center">
           
             <Image src={anIcon} alt="Hand Drawn Art" className="w-20 mx-2 opacity-50" />
           

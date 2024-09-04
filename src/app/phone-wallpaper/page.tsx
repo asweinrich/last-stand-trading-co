@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+
 
 const overlayDriveIn = '/media/phone-wallpaper/drive-in.png';
 const overlayWanted = '/media/phone-wallpaper/wanted.png';
@@ -12,6 +14,8 @@ const overlayDriveInPreview = '/media/phone-wallpaper/drive-inPreview.png';
 const overlayWhitePreview = '/media/phone-wallpaper/bg-whitePreview.png';
 const overlayOneOfOnePreview = '/media/phone-wallpaper/one-of-onePreview.png';
 const overlayWantedPreview = '/media/phone-wallpaper/wantedPreview.png';
+
+
 
 
 
@@ -307,9 +311,21 @@ const PhoneWallpaper = () => {
     }
   }
 
+  function BackArrow() {
+    return(
+      <Link href="/" className="flex">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="size-5">
+          <path fillRule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clipRule="evenodd" />
+        </svg>
+        &nbsp; back
+      </Link>
+    )
+  }
+
   return (
     <div className="p-4 max-w-md mx-auto">
-      <h1 className="text-4xl font-bold text-center">Phone Wallpapers</h1>
+      <BackArrow />
+      <h1 className="text-4xl font-bold text-center mb-6">Phone Wallpapers</h1>
 
       <canvas id="canvas-preview" className="mx-auto my-4"></canvas>
       <p className="text-xl leading-none text-center my-4">

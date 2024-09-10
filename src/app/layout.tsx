@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
+import { Analytics } from "@vercel/analytics/react";
 
 const steezyFont = localFont({
   src: [
@@ -32,7 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${steezyFont.className} bg-stone-800`}>{children}</body>
+      <body className={`${steezyFont.className} bg-stone-800`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

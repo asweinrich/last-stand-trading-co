@@ -33,7 +33,7 @@ const MalibuHigh = () => {
         canvas.height = 204
 
         const overlay = new Image()
-        overlay.src = '/media/malibu-high/malibu-high-id.svg'
+        overlay.src = '/media/malibu-high/malibu-high-id.png'
 
         const wildOneImg = new Image()
         wildOneImg.crossOrigin = 'anonymous'
@@ -51,7 +51,7 @@ const MalibuHigh = () => {
           ctx.fillText('ID#: '+paddedId, (0.2067*canvas.width), (0.838*canvas.height))
           //make a ratio of screen width 
           ctx.font = "17px SteezBold";
-          ctx.fillText(nftAlias, (0.64*canvas.width), (0.94*canvas.height))
+          ctx.fillText(nftAlias.toUpperCase(), (0.64*canvas.width), (0.94*canvas.height))
 
           ctxFull.drawImage(wildOneImg, 48, 64, 876, 876)
           ctxFull.drawImage(overlay, 0, 0, 2388, 1522)
@@ -63,7 +63,7 @@ const MalibuHigh = () => {
           ctxFull.font = "134px SteezBold";
           ctxFull.textAlign = "center";
           ctxFull.fillStyle = '#000'
-          ctxFull.fillText(nftAlias, 1528, 1416)
+          ctxFull.fillText(nftAlias.toUpperCase(), 1528, 1416)
         }
       }
     }
@@ -129,10 +129,13 @@ const MalibuHigh = () => {
   return (
     <div className="p-4 max-w-md mx-auto">
       <BackArrow />
-      <h1 className="text-4xl font-bold text-center mb-6">Malibu High ID Generator</h1>
+      <div className="border-b-2 mt-4 mb-6 py-6">
+        <h1 className="text-4xl font-bold text-center mb-2">Malibu High ID Generator</h1>
+        <p className="text-xl leading-none text-center">
+          Enter your Wild One ID and alias, then hit GENERATE to get your school ID card
+        </p>
+      </div>
       
-      <canvas id="canvas-preview" className="mx-auto my-4"></canvas>
-      <p className="text-xl leading-none text-center my-4">Enter your Wild One ID and alias, then hit GENERATE to get your school ID card</p>
       <div className="space-y-3">
         <input
           type="number"
@@ -150,7 +153,7 @@ const MalibuHigh = () => {
         />
         <button
           onClick={handleFetchAttributes}
-          className="w-full font-bold bg-red-700 text-white px-4 py-2 rounded text-3xl"
+          className="w-full font-bold bg-red-700 text-white px-4 py-1 rounded text-3xl"
         >
           Generate
         </button>
@@ -158,9 +161,11 @@ const MalibuHigh = () => {
 
         <p className="text-xl leading-none text-center my-4">When your ID is ready, hit EXPORT to save it in high resolution</p>
 
-        <button className="w-full font-bold bg-red-700 text-white px-4 py-2 rounded text-3xl" onClick={() => saveImage()}>Export</button>
+        <button className="w-full font-bold bg-red-700 text-white px-4 py-1 rounded text-3xl" onClick={() => saveImage()}>Export</button>
 
       </div>
+
+      <canvas id="canvas-preview" className="mx-auto my-4"></canvas>
 
 
 

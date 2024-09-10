@@ -325,12 +325,12 @@ const PhoneWallpaper = () => {
   return (
     <div className="p-4 max-w-md mx-auto">
       <BackArrow />
-      <h1 className="text-4xl font-bold text-center mb-6">Phone Wallpapers</h1>
-
-      <canvas id="canvas-preview" className="mx-auto my-4"></canvas>
-      <p className="text-xl leading-none text-center my-4">
-        Enter your Wild One ID, then hit GENERATE to get a custom phone wallpaper
-      </p>
+      <div className="border-b-2 mt-4 mb-6 py-6">
+        <h1 className="text-4xl font-bold text-center mb-2">Phone Wallpapers</h1>
+        <p className="text-xl leading-none text-center">
+          Enter your Wild One ID, then hit GENERATE to get a custom phone wallpaper
+        </p>
+      </div>
    
       <form onSubmit={setWildOneData}>
         
@@ -346,7 +346,7 @@ const PhoneWallpaper = () => {
             required
           />
           <button
-            className="w-full font-bold bg-red-700 text-white px-4 py-2 rounded text-3xl"
+            className="w-full font-bold bg-red-700 text-white px-4 py-1 rounded text-3xl"
             type="submit"
           >
             Generate
@@ -354,10 +354,10 @@ const PhoneWallpaper = () => {
 
           <span className="text-red-800 my-2 error-message">{errorMessage}</span>
 
-          <p className="text-xl leading-none text-center my-4">When your ID is ready, hit EXPORT to save it in high resolution</p>
+          <p className="text-xl leading-none text-center my-4">When your wallpaper is ready, hit EXPORT to save it in high resolution</p>
 
           <button
-            className="w-full font-bold bg-red-700 text-white px-4 py-2 rounded text-3xl"
+            className="w-full font-bold bg-red-700 text-white px-4 py-1 rounded text-3xl"
             type="button"
             onClick={() => saveImage()}
           >
@@ -366,6 +366,8 @@ const PhoneWallpaper = () => {
         </div>
       
       </form>
+
+      <canvas id="canvas-preview" className="mx-auto my-4"></canvas>
 
       <div className="hidden flex-column align-items-center">
         <canvas

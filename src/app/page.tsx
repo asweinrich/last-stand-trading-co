@@ -11,21 +11,34 @@ export default function Home() {
   return (
     <>
     <div className="flex flex-col items-center justify-between h-screen max-w-[1000px] mx-auto overflow-hidden relative">
-      <div className="text-center p-4">
+      <div className="text-center p-4 z-20">
         <h1 className="text-4xl font-bold mb-8">Last Stand Trading Company</h1>
-        <div className="flex flex-row justify-center">
-          
+        <div className="flex flex-row justify-center text-lg">
+
+          <div className="flex-col">
             <Image src={anIcon} alt="Hand Drawn Art" className="w-20 mx-2 opacity-50" />
+            ????
+          </div>
+          <div className="flex-col">
+            <Link href="/malibu-high">
+              <Image src={mhIcon} alt="Hand Drawn Art" className="w-20 mx-2" />
+            </Link>
+            Malibu High
+          </div>
+          <div className="flex-col">
+            <Link href="/phone-wallpaper">
+              <Image src={bgIcon} alt="Hand Drawn Art" className="w-20 mx-2" />
+            </Link>
+            Phone Wallpaper
+          </div>
           
-          <Link href="/malibu-high">
-            <Image src={mhIcon} alt="Hand Drawn Art" className="w-20 mx-2" />
-          </Link>
-          <Link href="/phone-wallpaper">
-            <Image src={bgIcon} alt="Hand Drawn Art" className="w-20 mx-2" />
-          </Link>
+            
+          
+          
+          
         </div>
       </div>
-      <div className="absolute bottom-0 z-10">
+      <div className="fixed bottom-0 z-10">
         <img src="/png/lstc-counter.png" alt="Hand Drawn Art" className="object-cover" />
       </div>
       

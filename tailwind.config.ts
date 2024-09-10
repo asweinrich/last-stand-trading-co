@@ -26,19 +26,21 @@ const config: Config = {
         'custom': ['Steezy', 'sans-serif'],
       },
       textShadow: {
-        'default': '3px 3px 0px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000',  // Custom shadow
+        'default': '2px 2px 0px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000',  // Custom shadow
       },
     },
   },
   plugins: [
-    function({ addUtilities }: PluginAPI) {  // Use the PluginAPI type here
+    function ({ addUtilities }: PluginAPI) {
       const newUtilities = {
         '.text-shadow': {
           textShadow: '2px 2px 0px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000',
         },
       };
+
       // Instead of passing variants directly, we add utilities and handle responsiveness
-      addUtilities(newUtilities, { variants: ['responsive', 'hover'] });    },
+      addUtilities(newUtilities);
+    },
   ],
 };
 

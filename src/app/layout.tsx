@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${steezyFont.className} bg-stone-900`}>{children}</body>
+      <body className={`${steezyFont.className} bg-stone-800`}>{children}</body>
     </html>
   );
 }

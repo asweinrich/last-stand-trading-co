@@ -12,7 +12,7 @@ export default function Home() {
     <>
     <div className="flex flex-col items-center justify-between h-screen max-w-[1000px] mx-auto overflow-hidden relative">
       <div className="text-center p-4 z-20">
-        <h1 className="text-4xl font-bold mb-8">Last Stand Trading Company</h1>
+      <img src="/png/banner_lstc.png" className="mb-8 max-w-72 mx-auto" />
         <div className="flex flex-row justify-center text-lg space-x-2">
 
           <div className="flex-col">

@@ -14,6 +14,7 @@ const overlayDriveInPreview = '/media/phone-wallpaper/drive-inPreview.png';
 const overlayWhitePreview = '/media/phone-wallpaper/bg-whitePreview.png';
 const overlayOneOfOnePreview = '/media/phone-wallpaper/one-of-onePreview.png';
 const overlayWantedPreview = '/media/phone-wallpaper/wantedPreview.png';
+const overlayPhone = '/media/phone-wallpaper/phone.png';
 
 
 
@@ -322,6 +323,33 @@ const PhoneWallpaper = () => {
     )
   }
 
+  const DateTimeDisplay = () => {
+    // Get today's date
+    const today = new Date();
+
+    // Format the date as "Tuesday, September 10"
+    const formattedDate = today.toLocaleDateString('en-US', {
+      weekday: 'long',
+      month: 'long',
+      day: 'numeric',
+    });
+
+    // Format the time as "8:27"
+    const formattedTime = today.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,  // 12-hour clock with AM/PM
+    })
+    .replace(/ AM| PM/, ''); // Remove "AM" or "PM"
+
+    return (
+      <div className="flex flex-col absolute top-32 left-0 right-0 text-shadow">
+        <span className="text-2xl">{formattedDate}</span>
+        <span className="text-8xl" style={{lineHeight: 0.75}}>{formattedTime}</span>
+      </div>
+    );
+  };
+
   return (
     <div className="p-4 max-w-md mx-auto">
       <BackArrow />
@@ -367,7 +395,11 @@ const PhoneWallpaper = () => {
       
       </form>
 
-      <canvas id="canvas-preview" className="mx-auto my-4"></canvas>
+      <div className="relative mx-auto pt-12 px-[3.25rem] text-center">
+        <DateTimeDisplay />
+        <img src="/media/phone-wallpaper/phone.png" className="absolute top-0 left-0" style={{ transform: 'scale(0.985)' }}/>
+        <canvas id="canvas-preview" className="rounded-phone"></canvas>
+      </div>
 
       <div className="hidden flex-column align-items-center">
         <canvas

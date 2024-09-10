@@ -395,10 +395,10 @@ const PhoneWallpaper = () => {
       
       </form>
 
-      <div className="relative mx-auto pt-12 px-[3.25rem] text-center">
+      <div className="relative mx-auto pt-12 text-center">
         <DateTimeDisplay />
-        <img src="/media/phone-wallpaper/phone.png" className="absolute top-0 left-0" style={{ transform: 'scale(0.985)' }}/>
-        <canvas id="canvas-preview" className="rounded-phone"></canvas>
+        <img src="/media/phone-wallpaper/phone.png" className="absolute top-1 left-0 right-0 mx-auto" style={{ height: '762px', width: '352px', objectFit: 'cover' }}/>
+        <canvas id="canvas-preview" className="rounded-phone mx-auto"></canvas>
       </div>
 
       <div className="hidden flex-column align-items-center">

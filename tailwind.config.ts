@@ -26,7 +26,7 @@ const config: Config = {
         'custom': ['Steezy', 'sans-serif'],
       },
       textShadow: {
-        'default': '2px 2px 0px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000',  // Custom shadow
+        'default': '2px 2px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, -1px -1px 0px #000',  // Custom shadow
       },
     },
   },
@@ -34,7 +34,7 @@ const config: Config = {
     function ({ addUtilities }: PluginAPI) {
       const newUtilities = {
         '.text-shadow': {
-          textShadow: '2px 2px 0px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000',
+          textShadow: '1px 1px 0px #000, -1px 1px 0px #000, 1px -1px 0px #000, -1px -1px 0px #000',
         },
       };
 

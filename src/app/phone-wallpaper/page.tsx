@@ -33,6 +33,12 @@ const PhoneWallpaper = () => {
     null,
   ]);
   const [errorMessage, setErrorMessage] = useState('');
+  const [firstDI, setFirstDI] = useState(true)
+  const [firstSC, setFirstSC] = useState(true)
+  const [firstWH, setFirstWH] = useState(true)
+  const [firstWA, setFirstWA] = useState(true)
+  const [firstOO, setFirstOO] = useState(true)
+
 
   useEffect(() => {
 
@@ -74,6 +80,9 @@ const PhoneWallpaper = () => {
           baseImg.crossOrigin = 'Anonymous';
           baseImg.src = wildOne[1] as string;
 
+          const tryAgain = new Image()
+          tryAgain.src = '/media/phone-wallpaper/tryAgain.png'
+
           await Promise.all([
             new Promise<void>((resolve) => (overlay.onload = () => resolve())),
             new Promise<void>((resolve) => (overlayP.onload = () => resolve())),
@@ -106,6 +115,10 @@ const PhoneWallpaper = () => {
   
           // Draw based on the selected overlay
           if (wildOne[2] === overlayDriveIn) {
+
+            ctx.save()
+            ctxFull.save()
+            
             ctx.drawImage(overlayP, 0, 0, canvas.width, canvas.height);
             ctx.drawImage(baseImg, 20*sizeRatio, 203*sizeRatio, 270*sizeRatio, 270*sizeRatio);
             ctx.rotate((-5 * Math.PI) / 180);
@@ -140,7 +153,21 @@ const PhoneWallpaper = () => {
             ctxFull.textAlign = 'center';
             ctxFull.fillStyle = driveInTextColor;
             ctxFull.fillText('STARRING WILD ONE ' + wildOne[0]!, 560, 1645);
+
+            ctx.restore()
+            ctxFull.restore()
+
+            if(firstDI === true) {
+              ctx.drawImage(tryAgain, 0, 0, canvas.width, canvas.height)
+              ctxFull.drawImage(tryAgain, 0, 0, canvasFull.width, canvasFull.height)
+              setFirstDI(false)
+            }
+
           } else if (wildOne[2] === overlayScribb) {
+
+            ctx.save()
+            ctxFull.save()
+
             ctx.fillStyle = 'red';
             ctx.fillRect(0, 0, 313*sizeRatio, 677*sizeRatio);
             ctx.rotate((-5 * Math.PI) / 180);
@@ -166,7 +193,22 @@ const PhoneWallpaper = () => {
             ctxFull.fillStyle = '#222222';
             ctxFull.rotate((-6.5 * Math.PI) / 180);
             ctxFull.fillText('"Wild One #' + wildOne[0]! + '"', 450, 898);
+            
+            
+            ctx.restore()
+            ctxFull.restore()
+
+            if(firstSC === true) {
+              ctx.drawImage(tryAgain, 0, 0, canvas.width, canvas.height)
+              ctxFull.drawImage(tryAgain, 0, 0, canvasFull.width, canvasFull.height)
+              setFirstSC(false)
+            }
+
           } else if (wildOne[2] === overlayOneOfOne) {
+
+            ctx.save()
+            ctxFull.save()
+
             ctx.drawImage(baseImg, 92*sizeRatio, 273*sizeRatio, 130*sizeRatio, 130*sizeRatio);
             ctx.drawImage(overlayP, 0, 0, canvas.width, canvas.height);
             canvas.style.letterSpacing = '0.5px';
@@ -186,7 +228,21 @@ const PhoneWallpaper = () => {
             ctxFull.fillText('' + wildOne[3]!, 563, 1755);
             ctxFull.font = '30px Calibri';
             ctxFull.fillText(String(wildOne[0]), 563, 1797);
+
+            ctx.restore()
+            ctxFull.restore()
+
+            if(firstOO === true) {
+              ctx.drawImage(tryAgain, 0, 0, canvas.width, canvas.height)
+              ctxFull.drawImage(tryAgain, 0, 0, canvasFull.width, canvasFull.height)
+              setFirstOO(false)
+            }
+
           } else if (wildOne[2] === overlayWanted) {
+
+            ctx.save()
+            ctxFull.save()
+
             ctx.drawImage(overlayP, 0, 0, canvas.width, canvas.height);
             ctx.drawImage(baseImg, 68*sizeRatio, 233*sizeRatio, 148*sizeRatio, 148*sizeRatio);
             canvas.style.letterSpacing = '0.5px';
@@ -202,7 +258,21 @@ const PhoneWallpaper = () => {
             ctxFull.textAlign = 'center';
             ctxFull.fillStyle = '#222222';
             ctxFull.fillText('$' + wildOne[0]!, 505, 1535);
+
+            ctx.restore()
+            ctxFull.restore()
+
+            if(firstWA === true) {
+              ctx.drawImage(tryAgain, 0, 0, canvas.width, canvas.height)
+              ctxFull.drawImage(tryAgain, 0, 0, canvasFull.width, canvasFull.height)
+              setFirstWA(false)
+            }
+
           } else if (wildOne[2]! === overlayWhite) {
+
+            ctx.save()
+            ctxFull.save()
+
             ctx.rotate((11 * Math.PI) / 180);
             ctx.drawImage(baseImg, 194*sizeRatio, 382*sizeRatio, 181*sizeRatio, 181*sizeRatio);
             ctx.rotate((-11 * Math.PI) / 180);
@@ -225,6 +295,16 @@ const PhoneWallpaper = () => {
             ctxFull.fillStyle = '#222222';
             ctxFull.rotate((6 * Math.PI) / 180);
             ctxFull.fillText('WO-' + paddedId, 790, 1508);
+
+            ctx.restore()
+            ctxFull.restore()
+
+            if(firstWH === true) {
+              ctx.drawImage(tryAgain, 0, 0, canvas.width, canvas.height)
+              ctxFull.drawImage(tryAgain, 0, 0, canvasFull.width, canvasFull.height)
+              setFirstWH(false)
+            }
+
           }
         };
 

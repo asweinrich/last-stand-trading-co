@@ -37,9 +37,8 @@ const config: Config = {
           textShadow: '2px 2px 0px #000, -1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000',
         },
       };
-      addUtilities(newUtilities, {
-        variants: ['responsive', 'hover'], // Use an object for variants
-      });    },
+      // Instead of passing variants directly, we add utilities and handle responsiveness
+      addUtilities(newUtilities, { variants: ['responsive', 'hover'] });    },
   ],
 };
 
